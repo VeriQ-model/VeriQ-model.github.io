@@ -3,7 +3,7 @@ import { Sun, Moon, FileText, Save, Download, Trash2, Home, HelpCircle, BarChart
 
 //który widok pokazać, sterowanie dialogami, przekazanie danych
 import LandingPage from './components/LandingPage.jsx';
-import MatrixView from './components/ModelView.jsx';
+import ModelView from './components/ModelView.jsx';
 import Toast from './components/Toast.jsx';
 import HelpDialog from './components/dialogs/HelpDialog.jsx';
 import RadarChartDialog from './components/dialogs/RadarChartDialog.jsx';
@@ -23,14 +23,14 @@ import { STORAGE_KEYS } from './components/utils/constants.js';
 
 //logika aplikacji
 export default function App() {
-  //stan czy aktywny jest landing page czy matrix(domyślnie landing page)
+  //stan czy aktywny jest landing page czy model(domyślnie landing page)
   const [currentView, setCurrentView] = useState('landing');
   
   //stan czy okno konfiguracji pdf jest otwarte
   const [showPDFConfig, setShowPDFConfig] = useState(false);
   const [isHelpOpen, setIsHelpOpen] = useState(false);
   const [isRadarChartOpen, setIsRadarChartOpen] = useState(false);
-  const matrixRef = useRef(null);
+  const modelRef = useRef(null);
 
   //toggle zmienia język
   const [language, setLanguage, toggleLanguage] = useLanguage();
@@ -146,7 +146,7 @@ export default function App() {
       await generatePDF({
         comments,
         sources,
-        MATRIX_DATA,
+        MODEL_DATA,
         language,
         title,
         author
@@ -167,7 +167,7 @@ export default function App() {
     setSources([]);
     removeFromStorage(STORAGE_KEYS.COMMENTS);
     removeFromStorage(STORAGE_KEYS.SOURCES);
-    setCurrentView('matrix');
+    setCurrentView('model');
     showToast(language === 'pl' ? 'Nowy projekt utworzony' : 'New project created');
   };
 
@@ -188,7 +188,7 @@ export default function App() {
       else {
         setComments(data);
       }
-      setCurrentView('matrix');
+      setCurrentView('model');
       showToast(t('importSuccess'));
     } catch (err) {
       showToast(t('importError'), 'error');
@@ -264,8 +264,8 @@ export default function App() {
         )}
       </div>
 
-      <div className="content" ref={matrixRef}>
-        <MatrixView
+      <div className="content" ref={modelRef}>
+        <ModelView
           comments={comments}
           onSave={handleSaveComment}
           onDelete={handleDeleteComment}
