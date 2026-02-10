@@ -1,1 +1,1 @@
-# VeriQ-model.github.io
+# VeriQ-model.github.io (Information Verification Model)
