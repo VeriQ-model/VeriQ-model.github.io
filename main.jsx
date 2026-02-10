@@ -1,6 +1,6 @@
 import React from  'react';
 import ReactDOM from 'react-dom/client';
-import App from '';
+import App from './App.jsx';
 import './styles/styles.css';
 
 //utworzenie kontenera reacta w root index.html
