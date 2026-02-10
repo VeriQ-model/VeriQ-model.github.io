@@ -6,8 +6,8 @@ import './styles/styles.css';
 //utworzenie kontenera reacta w root index.html
 ReactDOM.createRoot(document.getElementById('root')).render(
     //umieszczenie komponentu app do root i uruchomienie aplikacji
-    /*<React.StrictMode>
+    <React.StrictMode>
         <App />
-    </React.StrictMode>*/
-    <h1>REACT DZIAŁA</h1>
+    </React.StrictMode>
+   // <h1>REACT DZIAŁA</h1>
 );
