@@ -1,0 +1,58 @@
+#nazwa workflow widoczna na github w repo
+name: Deploy to GitHub Pages
+
+#workflow uruchomi się za każdym razem, gdy zostanie wykonany push do gałęzi main
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+#uprawienia workflow do odczytu repo, tworzenia github pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+#nowe wdrożenie nie przerywa trwającego, unikane są konflikty
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+#jedno zadanie, które działa na środowisku linux, ubuntu
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+      #pobraanie kodu z repozytorium, żeby workflow miał do niego dostęp
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      #instalacja środowisko Node.js 18 wersja, które jest potrzebne do uruchomienia projektu,
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+      
+      #instalacja paczek z package.json   
+      - name: Install dependencies
+        run: npm install
+      
+      #uruchomienie npm run build, która buduje stronę   
+      - name: Build
+        run: npm run build
+      
+      #konfiguracja środowiska wdrożenia strony na GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      #pakowanie i wysyłka strony (paczka, którą GitHub Pages opublikuje)
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './dist'
+      
+      #publikacja strony na GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
