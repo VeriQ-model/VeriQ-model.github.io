@@ -1,6 +1,6 @@
 //klucze localStorage (nazwy pod którymi dane są przechowywane w przeglądarce)
 export const STORAGE_KEYS = {
-  COMMENTS: 'matrix-comments', //wszystkie komentarze matrycy
+  COMMENTS: 'model-comments', //wszystkie komentarze modelu
   SOURCES: 'pe004-sources', //źródła dynamiczne 004
   LANGUAGE: 'app-language', //aktualny język
   THEME: 'app-theme' //aktualny motyw
