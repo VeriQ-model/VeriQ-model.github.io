@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'; //przechowywanie, synchronizacja oceny
 import { Trash2 } from 'lucide-react'; //emoji
 import { translations } from '../translations.js'; 
-import { getSEName, getRatingDescription } from '../matrixData.js'; //pobiera nazwę i opis oceny SE
+import { getSEName, getRatingDescription } from '../modelData.js'; //pobiera nazwę i opis oceny SE
 
 export default function RatingDialog({
   isOpen, //czy okno jest otwarte
