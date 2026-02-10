@@ -10,7 +10,7 @@ import RadarChartDialog from './components/dialogs/RadarChartDialog.jsx';
 import PDFConfigDialog from './components/dialogs/PDFConfigDialog.jsx';
 import { translations } from './components/translations.js';
 import { MODEL_DATA } from './components/modelData.js';
-import { generatePDF } from './components/pdf/index.js';
+//import { generatePDF } from './components/pdf/index.js';
 
 //logika zarządzania językiem, trybem, powiadomieniami, komentarzami, źródłami
 import { useLanguage, useTheme, useToast, useComments, useSources } from './components/hooks.js';
