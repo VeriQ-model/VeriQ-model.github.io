@@ -42,6 +42,23 @@ export default function App() {
   //pobiera tłumaczenia do odpowiedniego jezyka
   const t = (key) => translations[language][key] || key;
 
+// Ostrzeżenie przy próbie opuszczenia strony
+  useEffect(() => {
+    const handleBeforeUnload = (e) => {
+      // Standardowy sposób, ustawienie returnValue
+      e.preventDefault();
+      e.returnValue = '';
+      // Niektóre przeglądarki wymagają zwrócenia stringa
+      return '';
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, []);
+
   //poprzedni stan komenatzry przekazany do saveComment, nowy obiekt z zapisanym komentzraem
   const handleSaveComment = (id, title, content, images = []) => {
     setComments(prev => saveComment(prev, id, title, content, images));
