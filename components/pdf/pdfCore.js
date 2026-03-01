@@ -1,6 +1,6 @@
 import { createPDF, getPageDimensions, addStandardHeader, addPageNumbers, checkPageBreak, savePDF } from './pdfPageUtils.js';
 import { renderTitlePage } from './pdfTitlePage.js';
-import { renderLayer } from './pdfLayerRenderers.js';
+import { renderLayer } from './pdfLayerRenders.js';
 
 /**
  * generuje raport PDF z komentarzami
