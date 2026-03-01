@@ -5,21 +5,23 @@ import { Sun, Moon, FileText, Save, Download, Trash2, Home, HelpCircle, BarChart
 import LandingPage from './components/LandingPage.jsx';
 import ModelView from './components/ModelView.jsx';
 import Toast from './components/Toast.jsx';
-//import HelpDialog from './components/dialogs/HelpDialog.jsx';
-//import RadarChartDialog from './components/dialogs/RadarChartDialog.jsx';
-//import PDFConfigDialog from './components/dialogs/PDFConfigDialog.jsx';
+import HelpDialog from './components/dialogs/HelpDialog.jsx';
+import RadarChartDialog from './components/dialogs/RadarChartDialog.jsx';
+import PDFConfigDialog from './components/dialogs/PDFConfigDialog.jsx';
 import { translations } from './components/translations.js';
 import { MODEL_DATA } from './components/modelData.js';
-//import { generatePDF } from './components/pdf/index.js';
+import { generatePDF } from './components/pdf/index.js';
 
 //logika zarządzania językiem, trybem, powiadomieniami, komentarzami, źródłami
 import { useLanguage, useTheme, useToast, useComments, useSources } from './components/hooks.js';
 
 //apisywanie,usuwanie komentarzy, json, czyszczenie local storage
-//import { exportJSON, readImportFile } from './components/utils/export.js';
+import { exportJSON, readImportFile } from './components/utils/export.js';
 import { saveComment, deleteComment, saveRating, deleteRating, countComments } from './components/utils/comments.js';
 import { removeFromStorage } from './components/utils/storage.js';
 import { STORAGE_KEYS } from './components/utils/constants.js';
+
+
 
 //logika aplikacji
 export default function App() {
