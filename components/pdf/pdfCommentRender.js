@@ -1,7 +1,7 @@
 import { PDF_CONFIG } from './pdfConstants.js';
 import { encodeText, getTranslation } from './pdfTextUtils.js';
 import { embedImage } from './pdfImageUtils.js';
-import { getRatingDescription } from '../matrixData.js';
+import { getRatingDescription } from '../modelData.js';
 
 /**
  *sprawdza czy komentarz ma jakąkolwiek treść
