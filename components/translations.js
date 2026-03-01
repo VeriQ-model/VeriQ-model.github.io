@@ -365,8 +365,378 @@ export const translations = {
     documentation: 'Dokumentacja',
     regularity: 'Regularność',
    
+  },
+  
+  en: {
+    //nagłówek
+    appTitle: 'Information Analysis System',
+    appSubtitle: '"Point of view can be a dangerous luxury when substituted for insight and understanding" — Marshall McLuhan',
+    help: 'Help',
+    comments: 'Comments',
+    changeLanguage: 'Change Language',
+    toggleTheme: 'Toggle Theme',
+    
+    //strona startowa
+    welcomeTitle: 'Welcome to Information Analysis System',
+    welcomeSubtitle: 'Choose one of the options to start working with the system',
+    newProject: 'New Project',
+    newProjectDescription: 'Start a new analysis from an empty model',
+    importProject: 'Import Project',
+    importProjectDescription: 'Load a previously saved project from a JSON file',
+    footerText: 'Cybersecurity Tactics and Techniques Analysis System © 2026',
+    invalidFileType: 'Invalid file type. Select a JSON file.',
+    invalidJSON: 'JSON file read error. Make sure the file is valid.',
+    
+    //toolbar
+    generatePDF: 'Generate PDF',
+    radarChart: 'Radar Chart',
+    exportJSON: 'Export JSON',
+    importJSON: 'Import JSON',
+    clearAll: 'Clear All',
+    backToHome: 'Back to Home',
+    confirmBackToHome: 'Are you sure you want to go back to the home page? Unsaved changes will be retained in browser memory.',
+    
+    //dialog z tytułem i autorem przy generowaniu pdf 
+    pdfDialogTitle: 'PDF Report Configuration',
+    pdfReportTitleLabel: 'Report Title',
+    pdfReportTitlePlaceholder: 'e.g. XYZ Disinformation Campaign Analysis',
+    pdfAuthorLabel: 'Report Author',
+    pdfAuthorPlaceholder: 'e.g. John Doe',
+    pdfGenerateButton: 'Generate PDF',
+    pdfCancelButton: 'Cancel',
+    pdfValidationError: 'Please fill in all fields',
+    pdfPrimaryElement: 'Primary Element',
+    pdfSecondaryElement: 'Secondary Element',
+    
+    //dialog wykresu radarowego
+    radarTitle: 'Radar Chart of Ratings',
+    radarSelectPE: 'Select element:',
+    radarPE001: 'Primary Element 001 - Content Assessment',
+    radarPE002: 'Primary Element 002 - Source Assessment',
+    radarExportPNG: 'Export PNG',
+    radarClose: 'Close',
+    radarNoData: 'Incomplete data',
+    radarNoDataDesc: 'To generate the chart, all Secondary Elements in the selected Primary Element must have ratings (0-5).',
+    radarMissingRatings: 'Missing ratings in',
+    radarExportSuccess: 'Chart exported to PNG',
+    radarExportError: 'Export error',
+    
+    //widok źródel 004
+    sourcesAddBtn: 'Add Source',
+    sourcesNoSources: 'No sources. Click "Add Source" to start.',
+    sourcesDeleteSource: 'Delete Source',
+    sourcesConfirmDelete: 'Are you sure you want to delete this source?',
+    sourcesWillBeDeleted: 'Will be deleted along with all comments.',
+    
+    //dialog dodawania żródeł 004
+    sourceDialogTitle: 'Add New Source',
+    sourceDialogNameLabel: 'Source Name',
+    sourceDialogNamePlaceholder: 'Enter source name (e.g. "Reuters", "TVN24", "BBC News")',
+    sourceDialogCancel: 'Cancel',
+    sourceDialogAdd: 'Add Source',
+    
+    //nazwy warstw
+    layer1: 'Layer I - Information Quality',
+    layer2: 'Layer II - Broader Context',
+    layer3: 'Layer III - Source Comparison',
+    
+    //elementy nadrzędne (PE)
+    pe001: 'Content Assessment',
+    pe002: 'Source Assessment',
+    pe003: 'Context Assessment',
+    pe004: 'Contrast Assessment',
+    
+    //elementy podrzędne (SE)
+    se001_1: 'Logical Consistency',
+    se001_2: 'Message Format',
+    se001_3: 'Transparency',
+    se001_4: 'Reliability',
+    se001_5: 'Objectivity',
+    se001_6: 'Digital Authenticity',
+    
+    se002_1: 'Authority',
+    se002_2: 'Reputation',
+    se002_3: 'Affiliation',
+    se002_4: 'Credibility History',
+    
+    se003_1: 'Timeliness',
+    se003_2: 'Message Purpose',
+    se003_3: 'Audience',
+    se003_4: 'Social Context',
+    se003_5: 'Interests',
+    se003_6: 'Origin Circumstances',
+    se003_7: 'Dynamics',
+    se003_8: 'Geopolitical Context',
+    se003_9: 'Reach',
+    se003_10: 'Technical Message Coherence',
+    
+    se004_1: 'Agreements',
+    se004_2: 'Discrepancies',
+    se004_3: 'Diversity',
+    se004_4: 'International Context',
+    
+    //opisy elementów podrzędnych (SE)
+    seDesc_001_1: 'Evaluates whether the message is logically structured and facts are consistent with each other',
+    seDesc_001_2: 'Evaluates the method of information presentation and its adaptation to the topic',
+    seDesc_001_3: 'Evaluates whether data sources and methods are clearly presented',
+    seDesc_001_4: 'Evaluates the accuracy of facts and their verifiability',
+    seDesc_001_5: 'Evaluates whether the message is unbiased and free from manipulation',
+    seDesc_001_6: 'Evaluates the authenticity of documents and digital metadata',
+    
+    seDesc_002_1: 'Evaluates the level of competence and recognition of the source in the field',
+    seDesc_002_2: 'Evaluates the publication history and social ratings of the source',
+    seDesc_002_3: 'Evaluates organizational, financial, and political connections of the source',
+    seDesc_002_4: 'Evaluates previous publications of the source and their accuracy',
+    
+    seDesc_003_1: 'Evaluates the timeliness of the information and its publication date',
+    seDesc_003_2: 'Evaluates the author\'s intentions - to inform, persuade, manipulate, or entertain',
+    seDesc_003_3: 'Evaluates the target audience and content adaptation to the recipient',
+    seDesc_003_4: 'Evaluates the social, cultural, and economic context at the time of publication',
+    seDesc_003_5: 'Evaluates financial, political, or personal interests related to the message',
+    seDesc_003_6: 'Evaluates the conditions and circumstances of information creation',
+    seDesc_003_7: 'Evaluates the variability of the situation and the pace of events',
+    seDesc_003_8: 'Evaluates international aspects of the situation and relations between states',
+    seDesc_003_9: 'Evaluates the scale of information dissemination and its impact',
+    seDesc_003_10: 'Evaluates technical aspects of the message: format, quality, channels',
+    
+    seDesc_004_1: 'Evaluates common points between different sources',
+    seDesc_004_2: 'Evaluates differences in relations and conflicting information',
+    seDesc_004_3: 'Evaluates the diversity of information source types',
+    seDesc_004_4: 'Evaluates the international dimension of sources and perspectives of different countries',
+    
+    //wskazówki dla elementów podrzędnych (SE)
+    seHints_001_1: ['Conclusions do not follow from presented facts', 'Author confuses cause with effect', 'Selects only convenient facts („cherry-picking")', 'Internal contradictions exist', 'Steps of reasoning are missing („jumps" from thesis to thesis)'],
+    seHints_001_2: ['Format does not match the content (e.g., clickbait)', 'Excessive use of emotional words', 'Too many capital letters or exclamation marks', 'Low quality graphics or video', 'Chaotic text structure'],
+    seHints_001_3: ['No information about the author', 'Data sources are not provided', 'Hidden sponsorship or conflict of interest', 'Research methodology is unclear', 'No publication or update dates'],
+    seHints_001_4: ['Factual errors that can be checked', 'Lack of specific data and numbers', 'Relies mainly on anecdotes', 'Quotes without sources', 'No way to verify statements'],
+    seHints_001_5: ['One-sided description of the situation', 'Omits important facts or contexts', 'Uses biased language', 'Presents opinions as facts', 'Lacks alternative viewpoints'],
+    seHints_001_6: ['Suspicious file metadata', 'Editing traces in digital documents', 'Creation/modification date mismatch', 'Lack of digital signatures or certificates', 'Image manipulation (deepfake, photoshop)'],
+    
+    seHints_002_1: ['Lack of education or experience in the topic', 'Not recognizable in the industry', 'Self-proclaimed "expert" without qualifications', 'Pseudoscientific degrees or titles', 'Known for controversial views'],
+    seHints_002_2: ['History of publishing fake news', 'Multiple corrections and apologies', 'Negative ratings from fact-checkers', 'Known for sensational journalism', 'Blocked or flagged by platforms'],
+    seHints_002_3: ['Hidden connections with interest groups', 'Funding from opaque sources', 'Connections with political parties or lobbyists', 'Dependency on sponsors', 'Conflict of interest'],
+    seHints_002_4: ['Frequent publication of false information', 'Lack of correction of previous errors', 'History of removed content', 'Change in narrative line without explanation', 'Avoidance of responsibility for errors'],
+    
+    seHints_003_1: ['Old information presented as new', 'Latest events are omitted', 'No dates in key places', 'Outdated statistics', 'Does not consider the current context'],
+    seHints_003_2: ['Hidden persuasive intent', 'Explicit political or ideological agenda', 'Attempt to evoke specific emotions', 'Marketing or advertising nature', 'Propaganda or disinformation'],
+    seHints_003_3: ['Manipulative adaptation to the target audience', 'Different versions of the same information for different recipients', 'Use of stereotypes or preconceptions', 'Language adapted to evoke emotions', 'Omits information uncomfortable for the recipient'],
+    seHints_003_4: ['Ignores social context', 'Does not consider social moods', 'Omits important cultural issues', 'Lack of connection with the current social situation', 'Lack of understanding of the local context'],
+    seHints_003_5: ['Hidden financial benefits', 'Promotes specific products or services', 'Political or reputational gains', 'Impact on economic decisions', 'Personal benefits of the author'],
+    seHints_003_6: ['Created under external pressure', 'Published at a suspicious time', 'Unusual circumstances of disclosure', 'Forced publication', 'Lack of natural context of creation'],
+    seHints_003_7: ['Omits rapidly changing situations', 'Static image of dynamic events', 'No updates despite new facts', 'Does not consider the pace of change', 'Outdated analysis'],
+    seHints_003_8: ['Ignores international context', 'One-sided geopolitical perspective', 'Omits important relations between states', 'Lack of global view', 'Nationalist preconceptions'],
+    seHints_003_9: ['Local incident presented as global', 'Exaggerated scale of impact', 'Ignores the real reach', 'Artificially inflates significance', 'Lack of data on real impact'],
+    seHints_003_10: ['Technical inconsistencies', 'Format not suitable for content', 'Quality issues with recording/image', 'Unusual distribution channels', 'Traces of technical manipulation'],
+    
+    seHints_004_1: ['Only one source provides information', 'No confirmation in other sources', 'Agreement only in minor details', 'Mutual citation of the same sources', 'Echo chamber'],
+    seHints_004_2: ['Contradictory facts in different sources', 'Different dates or numbers', 'Different interpretations of the same events', 'Mutually exclusive versions', 'Impossible to reconcile relations'],
+    seHints_004_3: ['Only one type of source (e.g., only media)', 'Lack of expert perspective', 'Lack of original documents', 'Sources from only one side', 'Homogeneous group of sources'],
+    seHints_004_4: ['Only domestic sources', 'Lack of international perspective', 'Ignoring foreign sources', 'One-sided geopolitical narrative', 'Lack of global context'],
+    
+    //nagłówki paneli opisu
+    whatWeEvaluate: 'What we evaluate:',
+    warningSignals: 'Signals to watch out for:',
+    warningSignalsShort: 'Warning signals:',
+    
+    //dialog komentarza
+    commentTitle: 'Comment',
+    titleLabel: 'Title',
+    titlePlaceholder: 'Brief comment title',
+    contentLabel: 'Content',
+    contentPlaceholder: 'Detailed description, analysis, conclusions...',
+    imagesLabel: 'Obrazy',
+    imagesHint: 'Max 2MB per image',
+    chooseFiles: 'Choose files',
+    noFileChosen: 'No file chosen',
+    filesSelected: 'files selected',
+    uploadedImages: 'Uploaded images',
+    imageTooLarge: 'Image is too large (max 2MB)',
+    ratingLabel: 'Rating',
+    ratingPlaceholder: 'Select rating (0-5)',
+    noRating: 'No rating',
+    save: 'Save',
+    delete: 'Delete',
+    cancel: 'Cancel',
+    
+    //wyskakujące powiadomienia
+    commentSaved: 'Comment saved!',
+    commentDeleted: 'Comment deleted',
+    ratingSaved: 'Rating saved!',
+    ratingDeleted: 'Rating deleted',
+    exportSuccess: 'Exported successfully!',
+    importSuccess: 'Imported successfully!',
+    clearSuccess: 'All comments cleared',
+    exportError: 'Export error',
+    importError: 'Import error',
+    confirmClear: 'Are you sure you want to delete all comments?',
+    
+    //PDF
+    pdfTitle: 'Information Analysis Report',
+    pdfGenerated: 'PDF report generated successfully',
+    pdfGenerateError: 'Error generating PDF',
+    pdfComments: 'Comments',
+    pdfNoComments: 'No comments in this layer',
+    
+    //samouczek
+    helpTitle: 'Tutorial',
+    helpClose: 'Close',
+    
+    //sekcje samouczka
+    helpIntroTitle: 'Introduction',
+    helpL1Title: 'Layer I - Information Quality',
+    helpL2Title: 'Layer II - Broader Context',
+    helpL3Title: 'Layer III - Source Comparison',
+    helpUsageTitle: 'Application Features',
+    helpTipsTitle: 'Tips',
+    
+    //zawartość samouczka - wstęp
+    helpIntroHeading: 'Cybersecurity Tactics and Techniques Analysis System',
+    helpIntroDesc: 'The application allows systematic information analysis in three hierarchical layers:',
+    helpIntroL1: 'Content and source assessment',
+    helpIntroL2: 'Social and geopolitical context analysis',
+    helpIntroL3: 'Comparison of different sources',
+    helpHowToUse: 'How to use the application:',
+    helpStep1: 'Click on any Secondary Element (SE) with "+" button',
+    helpStep2: 'Add title and comment content',
+    helpStep3: 'Save comment - it will be marked with a comment icon',
+    helpStep4: 'Export analysis to PDF or JSON',
+    helpStep5: 'Import previously saved analyses from JSON',
+    helpNote: 'Only Secondary Elements (SE) are clickable and can contain comments. Primary Elements (PE) serve as category headers.',
+    
+    //zawartość samouczka - Warstwa 1 (L1)
+    helpL1Desc: 'Basic layer assessing fundamental aspects of information.',
+    helpL1PE001: '001 - Content Assessment',
+    helpL1PE001Desc: 'Analysis of the message content in terms of quality and reliability.',
+    helpL1PE002: '002 - Source Assessment',
+    helpL1PE002Desc: 'Analysis of source credibility and reputation.',
+    
+    //zawartość samouczka - opis elementów podrzędnych (SE) w Warstwie 1
+    helpSE001_1: 'Verification of logical consistency of arguments and absence of internal contradictions.',
+    helpSE001_2: 'Assessment of information presentation method (text, video, graphics).',
+    helpSE001_3: 'Openness of sources, data acquisition methods and potential limitations.',
+    helpSE001_4: 'Accuracy of facts, data verifiability and solid foundation.',
+    helpSE001_5: 'Unbiased presentation, lack of manipulation and bias.',
+    helpSE001_6: 'Verification of digital document authenticity, absence of technical manipulation.',
+    
+    helpSE002_1: 'Level of competence and recognition in the field.',
+    helpSE002_2: 'Publication history, social ratings and expert opinions.',
+    helpSE002_3: 'Organizational, financial and political connections of the source.',
+    helpSE002_4: 'Previous publications, their accuracy and error corrections.',
+    
+    //zawartość samouczka - Warstwa 2 (L2)
+    helpL2Desc: 'Contextual layer analyzing the broader picture of the situation.',
+    helpL2PE003: '003 - Context Assessment',
+    helpL2PE003Desc: 'Comprehensive analysis of circumstances of information creation and functioning.',
+    
+    helpSE003_1: 'Whether information is current, its publication date and potential updates.',
+    helpSE003_2: "Author's intentions: to inform, persuade, manipulate or entertain.",
+    helpSE003_3: 'Target audience of the message and content adaptation to the recipient.',
+    helpSE003_4: 'Social, cultural and economic context at the time of publication.',
+    helpSE003_5: 'Financial, political or personal interests related to the message.',
+    helpSE003_6: 'Conditions and circumstances of information creation.',
+    helpSE003_7: 'Situation variability, pace of events and information evolution.',
+    helpSE003_8: 'International aspects of the situation, relations between states.',
+    helpSE003_9: 'Scale of information dissemination and its impact.',
+    helpSE003_10: 'Technical aspects of the message: format, quality, distribution channels.',
+    
+    //zawartość samouczka - Warstwa 3 (L3)
+    helpL3Desc: 'Comparative layer analyzing differences and agreements between sources.',
+    helpL3PE004: '004 - Contrast Assessment',
+    helpL3PE004Desc: 'Comparison and verification of information from various sources.',
+    
+    helpSE004_1: 'Common points between different sources, fact confirmation.',
+    helpSE004_2: 'Differences in reports, conflicting information requiring clarification.',
+    helpSE004_3: 'Diversity of source types: media, experts, documents, witnesses.',
+    helpSE004_4: 'International dimension of sources, perspectives of different countries.',
+    
+    //zawartość samouczka - Funkcjonalności
+    helpUsageAddComments: 'Adding comments',
+    helpUsageAddStep1: 'Find the Secondary Element (SE) you want to analyze',
+    helpUsageAddStep2: 'Click on SE card with "+" button',
+    helpUsageAddStep3: 'In the dialog enter:',
+    helpUsageAddTitle: 'Brief summary (e.g. "Unverified source")',
+    helpUsageAddContent: 'Detailed analysis and conclusions',
+    helpUsageAddImage: 'Optionally: attach JPG/PNG image (max 5MB)',
+    helpUsageAddStep4: 'Click "Save"',
+    helpUsageImageNote: 'Comments with attachments are marked with comment and paperclip icons on the model',
+    
+    helpUsageEdit: 'Editing and deleting',
+    helpUsageEditStep1: 'Click on SE with comment icon to edit comment',
+    helpUsageEditStep2: 'In the dialog you can change title and content',
+    helpUsageEditStep3: 'Use "Delete" button to remove comment',
+    
+    helpUsageRating: 'Rating System',
+    helpUsageRatingStep1: 'Click the star icon (★) next to any Secondary Element in Layer I',
+    helpUsageRatingStep2: 'Each Secondary Element has an individual rating',
+    helpUsageRatingStep3: 'Secondary Element with a rating displays a star icon in a color corresponding to the level',
+    helpUsageRatingNote: 'The rating system allows you to quickly mark problematic areas without creating a full comment',
+    
+    helpUsageRadar: 'Radar Chart',
+    helpUsageRadarStep1: 'Click the "Radar Chart" button in the top menu',
+    helpUsageRadarStep2: 'Select the Primary Element (PE) for which you want to see the chart',
+    helpUsageRadarStep3: 'The chart will only generate when all Secondary Elements in the given Primary Element have ratings',
+    helpUsageRadarStep4: 'You can export the chart as PNG',
+    helpUsageRadarNote: 'The radar chart helps visually identify the most problematic areas of analysis',
+    
+    helpUsagePDF: 'PDF Export',
+    helpUsagePDFStep1: 'Click "Generate PDF" button',
+    helpUsagePDFStep2: 'Application will generate report with all comments',
+    helpUsagePDFStep3: 'PDF contains:',
+    helpUsagePDFItem1: 'List of all comments grouped by layers',
+    helpUsagePDFItem2: 'Attached images (if added to comments)',
+    helpUsagePDFItem3: 'Image captions (JPG/PNG filename)',
+    helpUsagePDFItem4: 'Date and time of report generation',
+    
+    helpUsageJSON: 'Export/Import JSON',
+    helpUsageJSONExport: 'Export:',
+    helpUsageJSONExportStep1: 'Click "Export JSON"',
+    helpUsageJSONExportStep2: 'Save file to disk',
+    helpUsageJSONImport: 'Import:',
+    helpUsageJSONImportStep1: 'Click "Import JSON"',
+    helpUsageJSONImportStep2: 'Select previously saved file',
+    helpUsageJSONImportStep3: 'All comments will be loaded',
+    
+    helpUsageClear: 'Clearing data',
+    helpUsageClearDesc: 'Click "Clear All" to remove all comments',
+    helpUsageClearConfirm: 'Confirmation will appear before deletion',
+    
+    //zawartość samouczka - wskazówki
+    helpTipsAnalysis: 'Effective analysis',
+    helpTipsAnalysisL1: 'First assess the quality of information itself',
+    helpTipsAnalysisL2: 'Understand the broader context of the situation',
+    helpTipsAnalysisL3: 'Compare with other sources',
+    
+    helpTipsComments: 'Creating comments',
+    helpTipsCommentsTitle: 'Should be brief and descriptive (2-5 words)',
+    helpTipsCommentsContent: 'Include specific facts, observations and conclusions',
+    helpTipsCommentsCite: 'If possible, refer to specific sources',
+    helpTipsCommentsDate: 'Include dates of events and publications',
+    
+    helpTipsOrganization: 'Work organization',
+    helpTipsOrgBackup: 'Regularly export JSON as backup',
+    helpTipsOrgNaming: 'Use consistent naming convention in titles',
+    helpTipsOrgPDF: 'Generate PDF after completing analysis as final report',
+    helpTipsOrgFiles: 'For complex analyses create separate JSON files for different topics',
+    
+    helpTipsBestPractices: 'Best practices',
+    helpTipsBPObjectivity: 'Separate facts from opinions',
+    helpTipsBPVerification: 'Verify information in multiple sources',
+    helpTipsBPDocumentation: 'Record sources and links in comment content',
+    helpTipsBPRegularity: 'Update analysis as new information arrives',
+    
+    helpTipsShortcuts: 'Keyboard shortcuts',
+    helpTipsShortcutsESC: 'Close open dialog',
+    helpTipsShortcutsClick: 'Close without saving',
+    
+    //dodatkowe klucze
+    note: 'Note',
+    objectivity: 'Objectivity',
+    verification: 'Verification',
+    documentation: 'Documentation',
+    regularity: 'Regularity',
+    click: 'Click outside dialog',
   }
-  };
+};
 
 //funkcja pomocnicza do pobierania tłumaczeń (wartość dla języka i klucza)
 export const getTranslation = (lang, key) => {
