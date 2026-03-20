@@ -3,7 +3,7 @@ export const translations = {
   pl: {
     //Nagłówek
     appTitle: 'System Analizy Informacji',
-    appSubtitle: '„Punkt widzenia może być niebezpiecznym luksusem, gdy zastępuje wgląd i zrozumienie" — Marshall McLuhan',
+    appSubtitle: '„Punkt widzenia może być niebezpiecznym luksusem, gdy zastępuje wgląd i zrozumienie" - Marshall McLuhan',
     help: 'Pomoc',
     comments: 'Komentarzy',
     changeLanguage: 'Zmień język',
@@ -24,17 +24,17 @@ export const translations = {
     generatePDF: 'Generuj PDF',
     radarChart: 'Wykres radarowy',
     exportJSON: 'Eksport JSON',
-    importJSON: 'Importuj JSON',
+    importJSON: 'Import JSON',
     clearAll: 'Wyczyść wszystko',
     backToHome: 'Powrót do strony głównej',
-    confirmBackToHome: 'Czy na pewno chcesz wrócić do strony głównej? Niezapisane zmiany zostaną zachowane w pamięci przeglądarki.',
+    confirmBackToHome: 'Czy na pewno chcesz wrócić do strony głównej? Niezapisane zmiany mogą zostać utracone.',
     
     //dialog z tytułem i autorem przy generowaniu pdf
     pdfDialogTitle: 'Personalizacja raportu PDF',
     pdfReportTitleLabel: 'Tytuł raportu',
-    pdfReportTitlePlaceholder: 'np. Analiza potencjalnej dezinformacji XYZ',
+    pdfReportTitlePlaceholder: 'Analiza potencjalnej dezinformacji XYZ',
     pdfAuthorLabel: 'Autor raportu',
-    pdfAuthorPlaceholder: 'np. Jan Kowalski',
+    pdfAuthorPlaceholder: 'Jan Kowalski',
     pdfGenerateButton: 'Generuj PDF',
     pdfCancelButton: 'Anuluj',
     pdfValidationError: 'Proszę wypełnić wszystkie pola',
@@ -46,27 +46,29 @@ export const translations = {
     radarSelectPE: 'Wybierz element:',
     radarPE001: 'Element nadrzędny 001 - Ocena treści',
     radarPE002: 'Element nadrzędny 002 - Ocena źródła',
-    radarExportPNG: 'Eksport PNG',
+    radarExportPNG: 'Eksportuj jako PNG',
     radarClose: 'Zamknij',
-    radarNoData: 'Brak kompletnych danych',
-    radarNoDataDesc: 'Aby wygenerować wykres, wszystkie Elementy podrzędne w wybranym Elemencie nadrzędnym muszą mieć oceny (0-5).',
-    radarMissingRatings: 'Brakujące oceny w',
-    radarExportSuccess: 'Wykres wyeksportowany do PNG',
+
+    radarNoData: 'Brak danych',
+    radarNoDataDesc: 'Uzupełnij wszystkie oceny (0–5), aby zobaczyć wykres',
+
+    radarMissingRatings: 'Brakujące oceny dla',
+    radarExportSuccess: 'Wykres wyeksportowany do pliku PNG',
     radarExportError: 'Błąd podczas eksportu',
     
     //widok źródeł w 004
     sourcesAddBtn: 'Dodaj źródło',
-    sourcesNoSources: 'Brak źródeł. Kliknij "Dodaj źródło" aby rozpocząć.',
+    sourcesNoSources: 'Brak źródeł. Kliknij "Dodaj źródło"',
     sourcesDeleteSource: 'Usuń źródło',
     sourcesConfirmDelete: 'Czy na pewno chcesz usunąć to źródło?',
     sourcesWillBeDeleted: 'Zostanie usunięte wraz ze wszystkimi komentarzami.',
     
     //dialog dodawania nowego źródła w 004
-    sourceDialogTitle: 'Dodaj nowe źródło',
+    sourceDialogTitle: 'Dodaj źródło',
     sourceDialogNameLabel: 'Nazwa źródła',
-    sourceDialogNamePlaceholder: 'Wpisz nazwę źródła (np. "Reuters", "Demagog.org", "BBC News")',
+    sourceDialogNamePlaceholder: 'Podać nazwę źródła lub link do artykułu/wypowiedzi',
     sourceDialogCancel: 'Anuluj',
-    sourceDialogAdd: 'Dodaj źródło',
+    sourceDialogAdd: 'Dodaj',
     
     //nazwy warstw
     layer1: 'Warstwa I - Jakość Informacji',
