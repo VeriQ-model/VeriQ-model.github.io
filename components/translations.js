@@ -66,7 +66,7 @@ export const translations = {
     //dialog dodawania nowego źródła w 004
     sourceDialogTitle: 'Dodaj źródło',
     sourceDialogNameLabel: 'Nazwa źródła',
-    sourceDialogNamePlaceholder: 'Podać nazwę źródła lub link do artykułu/wypowiedzi',
+    sourceDialogNamePlaceholder: 'Podaj nazwę źródła lub link do artykułu/wypowiedzi',
     sourceDialogCancel: 'Anuluj',
     sourceDialogAdd: 'Dodaj',
     
