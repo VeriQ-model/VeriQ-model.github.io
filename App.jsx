@@ -21,8 +21,6 @@ import { saveComment, deleteComment, saveRating, deleteRating, countComments } f
 import { removeFromStorage } from './components/utils/storage.js';
 import { STORAGE_KEYS } from './components/utils/constants.js';
 
-
-
 //logika aplikacji
 export default function App() {
   //stan czy aktywny jest landing page czy model(domyślnie landing page)
@@ -44,10 +42,10 @@ export default function App() {
   //pobiera tłumaczenia do odpowiedniego jezyka
   const t = (key) => translations[language][key] || key;
 
-// Ostrzeżenie przy próbie opuszczenia strony
+ // Ostrzeżenie przy próbie opuszczenia strony
   useEffect(() => {
     const handleBeforeUnload = (e) => {
-      // Standardowy sposób, ustawienie returnValue
+      // Standardowy sposób - ustawienie returnValue
       e.preventDefault();
       e.returnValue = '';
       // Niektóre przeglądarki wymagają zwrócenia stringa
@@ -84,17 +82,21 @@ export default function App() {
 
   //zarządza 004
   //obecna lista źródeł, utworzenie nowego ID, dodanie nowego źródła do tablicy
-  const handleAddSource = (title) => {
+  const handleAddSource = (sourceData) => {
     setSources(prev => {
       const nextNumber = prev.length + 1;
       const newSource = {
         id: `004.${nextNumber}`,
-        title: title,
+        title: sourceData.title,
+        accessDate: sourceData.accessDate || '',
+        accessLink: sourceData.accessLink || '',
+        character: sourceData.character || '',
+        status: sourceData.status || '',
         createdAt: new Date().toISOString()
       };
       return [...prev, newSource];
     });
-    showToast(language === 'pl' ? 'Źródło dodane' : 'Source added');
+    showToast(translations[language].toastSourceAdded);
   };
 
   //usuwanie źrodła 
@@ -119,7 +121,7 @@ export default function App() {
       return updated;
     });
 
-    showToast(language === 'pl' ? 'Źródło usunięte' : 'Source deleted');
+    showToast(translations[language].toastSourceDeleted);
   };
 
   //eksport json, tworzy plik z komentarzami i zrodlami
@@ -187,19 +189,15 @@ export default function App() {
     removeFromStorage(STORAGE_KEYS.COMMENTS);
     removeFromStorage(STORAGE_KEYS.SOURCES);
     setCurrentView('model');
-    showToast(language === 'pl' ? 'Nowy projekt utworzony' : 'New project created');
+    showToast(translations[language].toastNewProjectCreated);
   };
 
   //powrót na Landing Page
-   const handleBackToHome = () => {
-  const message = language === 'pl' 
-    ? 'Czy na pewno chcesz wrócić do strony głównej? Niezapisane zmiany mogą zostać utracone.'
-    : 'Are you sure you want to return to the home page? Unsaved changes may be lost.';
-  
-  if (window.confirm(message)) {
-    setCurrentView('landing');
-  }
-};
+  const handleBackToHome = () => {
+    if (window.confirm(t('confirmBackToHome'))) {
+      setCurrentView('landing');
+    }
+  };
 
   //import json z Landing Page
   const handleImportFromLanding = (data) => {
@@ -245,7 +243,7 @@ export default function App() {
           <p className="header-subtitle">{t('appSubtitle')}</p>
         </div>
         <div className="header-info">
-          <button className="btn btn-theme" onClick={toggleDarkMode} title={isDarkMode ? 'Jasny motyw' : 'Ciemny motyw'}>
+          <button className="btn btn-theme" onClick={toggleDarkMode} title={isDarkMode ? t('lightMode') : t('darkMode')}>
             {isDarkMode ? <Sun /> : <Moon />}
           </button>
           <button className="btn btn-language" onClick={toggleLanguage}>
