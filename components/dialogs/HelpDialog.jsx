@@ -274,12 +274,6 @@ export default function HelpDialog({ isOpen, onClose, language }) {
             <li>{t('documentation')}: {t('helpTipsBPDocumentation')}</li>
             <li>{t('regularity')}: {t('helpTipsBPRegularity')}</li>
           </ul>
-
-          <h4 style={{ fontWeight: 'bold' }}>{t('helpTipsShortcuts')}</h4>
-          <ul>
-            <li>ESC: {t('helpTipsShortcutsESC')}</li>
-            <li>{t('click')}: {t('helpTipsShortcutsClick')}</li>
-          </ul>
         </div>
       )
     }
