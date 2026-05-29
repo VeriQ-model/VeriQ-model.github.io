@@ -447,7 +447,7 @@ export const translations = {
     newProjectDescription: 'Start a new analysis from an empty model',
     importProject: 'Import Project',
     importProjectDescription: 'Load a previously saved project from a JSON file',
-    footerText: 'Cybersecurity Tactics and Techniques Analysis System © 2026',
+    footerText: 'VeriQ Information Verification Model',
     invalidFileType: 'Invalid file type. Select a JSON file.',
     invalidJSON: 'JSON file read error. Make sure the file is valid.',
     
@@ -712,7 +712,7 @@ export const translations = {
     helpTipsTitle: 'Tips',
     
     //zawartość samouczka - wstęp
-    helpIntroHeading: 'Cybersecurity Tactics and Techniques Analysis System',
+    helpIntroHeading: 'VeriQ Information Verification Model',
     helpIntroDesc: 'The application allows systematic information analysis in three hierarchical layers:',
     helpIntroL1: 'Content and source assessment',
     helpIntroL2: 'Social and geopolitical context analysis',
