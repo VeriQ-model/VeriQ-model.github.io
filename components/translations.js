@@ -2,7 +2,7 @@
 export const translations = {
   pl: {
     //Nagłówek
-    appTitle: 'System Analizy Informacji',
+    appTitle: 'Model Weryfikacji Informacji VeriQ',
     appSubtitle: 'VeriQ - veracity if you question',
     help: 'Pomoc',
     comments: 'Komentarzy',
@@ -12,7 +12,7 @@ export const translations = {
     darkMode: 'Ciemny motyw',
     
     //strona startowa
-    welcomeTitle: 'Witaj w Systemie Analizy Informacji',
+    welcomeTitle: 'Witaj w VeriQ!',
     welcomeSubtitle: 'Wybierz jedną z opcji, aby rozpocząć pracę',
     newProject: 'Nowa analiza',
     newProjectDescription: 'Rozpocznij nową analizę',
@@ -431,7 +431,7 @@ export const translations = {
   
   en: {
     //nagłówek
-    appTitle: 'Information Analysis System',
+    appTitle: 'VeriQ Information Verification Model',
     appSubtitle: 'VeriQ - veracity if you question',
     help: 'Help',
     comments: 'Comments',
@@ -441,9 +441,9 @@ export const translations = {
     darkMode: 'Dark mode',
     
     //strona startowa
-    welcomeTitle: 'Welcome to Information Analysis System',
+    welcomeTitle: 'Welcome to VeriQ!',
     welcomeSubtitle: 'Choose one of the options to start working with the system',
-    newProject: 'New Project',
+    newProject: 'New analysis',
     newProjectDescription: 'Start a new analysis from an empty model',
     importProject: 'Import Project',
     importProjectDescription: 'Load a previously saved project from a JSON file',
